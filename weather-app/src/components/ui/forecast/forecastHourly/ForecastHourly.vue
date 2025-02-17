@@ -17,6 +17,7 @@ import SlideIn from '../../animations/SlideIn.vue';
       <div class="forecast_hourly_date">{{ new Date(weatherStore?.hourlyForecast[hour]?.dt * 1000).getHours() }}:00</div>
       <div class="forecast_hourly_icon">
         <img :src="weatherIconStore?.iconsMap[(weatherStore?.hourlyForecast[hour]?.weather[0]?.main as WeatherMainType)]" alt="icon">
+        <img src="/src/assets/images/clouds.gif" alt="">
       </div>
       <div class="forecast_hourly_temp">{{ Math.round(weatherStore?.hourlyForecast[hour]?.main?.temp) }}°</div>
     </SlideIn>
